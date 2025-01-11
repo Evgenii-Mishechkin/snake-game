@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Проверка возраста
+  // Age verification
   checkAge();
 
-  // Загружаем header.html
+  // Load header.html
   fetch('./components/header.html')
     .then(response => {
       if (!response.ok) throw new Error(`Failed to load: ${response.statusText}`);
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error('Error loading header component:', error));
 
-  // Загружаем footer.html
+  // Load footer.html
   fetch('./components/footer.html')
     .then(response => {
       if (!response.ok) throw new Error(`Failed to load: ${response.statusText}`);
@@ -123,7 +123,6 @@ function showCookiesBanner() {
   banner.appendChild(declineButton);
   document.body.appendChild(banner);
 
-  // Плавное появление
   setTimeout(() => {
     banner.style.transform = 'translateY(0)';
   }, 10);

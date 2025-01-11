@@ -27,7 +27,48 @@ body {
 }
 
 
-/* Стили для модального окна запроса возраста */
+/* Styles for age verification modal */
+.age-modal {
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.age-modal-content {
+  padding: 20px;
+  background-color: #c2c9c7;
+  color: #1b1a1a;
+  border-radius: 10px;
+  border: 3px solid rgb(211, 0, 0);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.age-modal-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.age-modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(0, 211, 0);
+}
+
+.age-modal-content button:last-child {
+  color: rgb(211, 0, 0);
+}
 .modal {
   backdrop-filter: blur(10px);
   display: flex;
@@ -45,19 +86,30 @@ body {
 
 .modal-content {
   padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: #c2c9c7;
+  color: #1b1a1a;
+  border-radius: 10px;
+  border: 3px solid rgb(211, 0, 0);
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .modal-content button {
   margin: 10px;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 16px;
+  color: rgb(0, 211, 0);;
+}
+.modal-content button:last-child {
+  color: rgb(211, 0, 0);
 }
 
-/* Стили для баннера куки */
+/* Styles for cookies banner */
 .cookies-banner {
   position: fixed;
   z-index: 1000;
@@ -170,7 +222,7 @@ body {
   100% { color: #ff6347; }
 }
 
-/* Стили для intro-section */
+/* Styles for intro-section */
 
 .intro-section {
   display: flex;
@@ -207,7 +259,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
-/* Стили для контейнера с игрой */
+/* Styles for the game container */
 .game-container {
   display: flex;
   flex-direction: column;
@@ -244,7 +296,7 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.5) 70%); /* Эффект затемнения по краям */;
+  background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.5) 70%);
 }
 
 .score-container {
@@ -253,7 +305,7 @@ body {
   font-weight: bold;
 }
 
-/* Стили для кнопок управления */
+/* Styles for control buttons */
 .controls {
   display: flex;
   flex-direction: column;
@@ -290,7 +342,7 @@ body {
 /* PRIVACY POLICY */
 
 /* BLOG PAGE */
-/* Стили для карточек постов */
+/* Styles for post cards */
 .blog-container {
   display: flex;
   flex-direction: column;
@@ -338,7 +390,7 @@ body {
 }
 
 /* FOOTER */
-/* Стили для footer */
+/* Styles for footer */
 .footer {
   box-shadow: 0px -10px 20px rgba(27, 26, 26, 0.5);
   width: 100%;

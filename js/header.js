@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > lastScrollY) {
-      // Скролл вниз
+      // Scroll down
       header.style.transform = 'translateY(-100%)';
     } else {
-      // Скролл вверх
+      // Scroll up
       header.style.transform = 'translateY(0)';
     }
     lastScrollY = window.scrollY;

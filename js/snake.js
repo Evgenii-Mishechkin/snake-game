@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 		// Draw snake
-		ctx.fillStyle = "rgba(0, 211, 0, 0.6)"; // Зеленый цвет с прозрачностью
+    ctx.fillStyle = "rgba(0, 211, 0, 0.6)"; // Green color with transparency
 		snake.forEach((segment) =>
 			ctx.fillRect(segment.x, segment.y, grid - 2, grid - 2)
 		);
 
 		// Draw food
-		ctx.fillStyle = "rgba(211, 0, 0, 0.6)"; // Красный цвет с прозрачностью
+    ctx.fillStyle = "rgba(211, 0, 0, 0.6)"; // Red color with transparency
 		ctx.beginPath();
 		ctx.arc(food.x + grid / 2, food.y + grid / 2, (grid - 2) / 2, 0, 2 * Math.PI);
 		ctx.fill();
