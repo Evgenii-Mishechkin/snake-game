@@ -6,8 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // Function to randomly move the title element
   function moveTitle() {
-    const x = getRandomInt(0, 20);
-    const y = getRandomInt(0, 200);
+    let x, y;
+    if (window.innerWidth <= 425) {
+      x = getRandomInt(0, 0);
+      y = getRandomInt(0, 100);
+    } else {
+      x = getRandomInt(0, 20);
+      y = getRandomInt(0, 200);
+    }
     title.style.transform = `translate(${x}px, ${y}px)`;
   }
 

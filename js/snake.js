@@ -2,8 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("gameCanvas");
   const ctx = canvas.getContext("2d");
   const scoreElement = document.getElementById("score");
-  canvas.width = 400;
-  canvas.height = 400;
+  function resizeCanvas() {
+    if (window.innerWidth <= 425) {
+      canvas.width = 300;
+      canvas.height = 300;
+    } else {
+      canvas.width = 400;
+      canvas.height = 400;
+    }
+  }
+  
+  // Initial canvas size
+  resizeCanvas();
 
   const grid = 20;
   let snake = [{ x: grid * 2, y: grid * 2 }];

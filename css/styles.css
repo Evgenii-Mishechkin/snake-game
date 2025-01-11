@@ -364,3 +364,17 @@ body {
   font-size: 12px;
   line-height: 1.5;
 }
+
+@media screen and (max-width: 425px) {
+  .main__page-title {
+    font-size: 48px;
+  }
+  .intro-section {
+    max-width: 300px;
+    transform: translateY(50%) rotate(0deg);
+  }
+  .intro-section:hover {
+    transform: translateY(0%) rotate(0deg);
+  }
+  
+}
