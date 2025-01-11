@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Press Start 2P';
+  min-width: 425px;
+  background-color: #c0c7c5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 15px 0;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.main__title {
+  text-align: center;
+  color: rgb(0, 211, 0);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+/* Стили для модального окна запроса возраста */
+.modal {
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Стили для баннера куки */
+.cookies-banner {
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  width: 100%;
+  padding: 10px;
+  transition: transform 0.5s;
+  background-color: #333;
+  font-size: 12px;
+  font-weight: 200;
+  color: #fff;
+  text-align: center;
+}
+.cookies-banner p {
+  margin-bottom: 15px;
+}
+
+.cookies-banner .cookies-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.cookies-banner .cookies-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.cookies-button {
+  color: rgb(0, 211, 0);
+}
+.cookies-button:last-child {
+  color: rgb(211, 0, 0);
+}
+.cookies-button:hover {
+  opacity: 0.7;
+}
+
+/* HEADER */
+#header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+.header {
+  padding: 15px 0;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0px 10px 20px 2px rgba(27, 26, 26, 0.5);
+}
+
+.header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0 15px;
+  text-align: center;
+  list-style: none;
+}
+
+.header__link {
+  transition: color 0.3s;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__link:hover {
+  color: rgb(0, 211, 0);
+}
+.header__item {
+  padding-right: 15px;
+  border-right: 5px solid #fff;
+}
+.header__item:last-child {
+  padding-right: 0;
+  border-right: none;
+} 
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 30px 15px;
+  background-color: #fff;
+}
+
+.main__page-title {
+  font-size: 62px;
+  position: relative;
+  animation: colorChange 5s infinite;
+  transition: transform 1.5s ease; 
+}
+
+@keyframes colorChange {
+  0% { color: #ff6347; }
+  25% { color: #ffa500; }
+  50% { color: #32cd32; }
+  75% { color: #1e90ff; }
+  100% { color: #ff6347; }
+}
+
+/* Стили для intro-section */
+
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #1b1a1a;
+  border-radius: 10px;
+  background-color: #c2c9c7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+  max-width: 350px;
+  transform: translateY(50%) rotate(-6deg);
+  transition: transform 0.5s;
+  cursor: grab;
+}
+
+.intro-section:hover {
+  transform: translateY(0%) rotate(8deg);
+}
+
+.snake-image {
+  width: 140px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.game-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.game-instructions {
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* Стили для контейнера с игрой */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+#gameCanvas {
+  box-shadow: inset 0 0 78px rgba(140, 139, 139, 0.5), 0 0 10px rgba(60, 60, 60, 0.7);
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: #1b1a1a;
+  border: 10px solid #333;
+  border-radius: 20px;
+}
+
+#gameCanvas::before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+}
+
+#gameCanvas::after {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.5) 70%); /* Эффект затемнения по краям */;
+}
+
+.score-container {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Стили для кнопок управления */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.horizontal-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.control-button {
+  width: 50px;
+  margin: 5px;
+  padding: 15px;
+  transition: background-color 0.3s;
+  background-color: #333;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.control-button:hover {
+  background-color: #555;
+}
+/* COOKIE PAGE */
+.container__cookie a {
+  color: rgb(0, 211, 0);
+}
+
+/* PRIVACY POLICY */
+
+/* BLOG PAGE */
+/* Стили для карточек постов */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c2c9c7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+.post-card:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+.post-card:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.post-image {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.post-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* FOOTER */
+/* Стили для footer */
+.footer {
+  box-shadow: 0px -10px 20px rgba(27, 26, 26, 0.5);
+  width: 100%;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}

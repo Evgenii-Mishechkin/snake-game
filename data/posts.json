@@ -1,0 +1,17 @@
+[
+  {
+    "title": "The Birth of Snake 🐍",
+    "image": "./img/post-img/post1.png",
+    "content": "Did you know that the classic Snake game was first introduced in 1976 as an arcade game called \"Blockade\"? It wasn’t until 1997 that it became a global sensation, pre-installed on Nokia phones.📱This simple yet addictive game has inspired countless remakes and remains a beloved piece of gaming history."
+  },
+  {
+    "title": "The Psychology of Snake",
+    "image": "./img/post-img/post2.png",
+    "content": "Why is Snake so addictive? 🤔 The game's endless loop of eating and growing activates our brain's reward system. Completing tasks like \"eating the apple\" gives us dopamine hits, keeping us hooked for \"just one more round.\" 🎮 Plus, the growing challenge as the snake gets longer mirrors real-life problem-solving—simple at first, but increasingly complex!"
+  },
+  {
+    "title": "un Fact: Snake in Space? ",
+    "image": "./img/post-img/post3.png",
+    "content": "In 2012, Snake found its way into space—well, kind of! Astronauts aboard the International Space Station played a special version of the game during their downtime. 🛰️\nIt’s proof that even in zero gravity, Snake continues to entertain and connect us.\nImagine playing Snake in space—no walls, no limits! What would your strategy be? 🤔"
+  }
+]

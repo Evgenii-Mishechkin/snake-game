@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Snake Game Website</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" href="./img/snake.ico" type="image/x-icon">
+  <script src="./js/components.js" defer></script>
+  <script src="./js/snake.js" defer></script>
+  <script src="./js/header.js" defer></script>
+  <script src="./js/scripts.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="main">
+    <div class="container">
+      <h1 class="main__title main__page-title">Snake Game</h1>
+    </div>	
+    <div class="intro-section">
+      <img src="./img/snake.png" alt="snake" class="snake-image">
+      <h2 class="game-title">Welcome to Snake Game!</h2>
+      <p class="game-instructions">Use the arrow buttons below or the arrow keys on your keyboard to control the snake. Press any arrow key or button to start the game. Try to eat the food and grow as long as possible without hitting the walls or yourself. Good luck!</p>
+      </div>
+    <div class="game-container">
+      <canvas id="gameCanvas"></canvas>
+      <div class="score-container">
+          Score: <span id="score">0</span>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="control-button" id="up">▲</button>
+      <div class="horizontal-controls">
+        <button class="control-button" id="left">◀</button>
+        <button class="control-button" id="down">▼</button>
+        <button class="control-button" id="right">▶</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>
