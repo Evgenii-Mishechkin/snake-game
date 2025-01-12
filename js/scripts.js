@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const title = document.querySelector('.main__page-title');
+  const title = document.querySelector('.main__home-title');
 
   function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -16,6 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     title.style.transform = `translate(${x}px, ${y}px)`;
   }
-
+  moveTitle();
   setInterval(moveTitle, 1500); 
 });

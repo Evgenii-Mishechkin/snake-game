@@ -166,11 +166,21 @@ body {
   background-color: #fff;
 }
 
-.main__page-title {
+.main__home-title {
   font-size: 62px;
   position: relative;
   animation: colorChange 5s infinite;
   transition: transform 1.5s ease; 
+}
+.main__home-title::after {
+  content: '↓';
+  font-weight: 400;
+  font-size: 72px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: colorChange 5s infinite;
 }
 
 @keyframes colorChange {
@@ -366,7 +376,7 @@ body {
 }
 
 @media screen and (max-width: 425px) {
-  .main__page-title {
+  .main__home-title {
     font-size: 48px;
   }
   .intro-section {
